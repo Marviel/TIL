@@ -2,7 +2,7 @@
 
 When you run gcc/g++, you're able to specify the "-l" flag, which allows you to link system libraries into whatever it is you're compiling.
 
-For example, in some instances (using the Timing libraries) you need to link the real time libraries. The g++ flag for that is "-lrt".
+For example, in some instances (most instances involving time sensitive things in C++) you need to link the real time libraries. The g++ flag for that is "-lrt".
 
 So, if you're compiling a program called "RealTime.cpp" you might compile it like so:
 
