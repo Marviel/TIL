@@ -12,7 +12,6 @@ sudo apt-get install libusb-dev
 
 Then, this c++ file should perform the task you ask.
 ```
-#include <usb.h>
 #include <libusb-1.0/libusb.h>
 
 int resetDeviceConnection(UINT_16 vid, UINT_16 pid){
