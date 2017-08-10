@@ -1,4 +1,4 @@
-#.SO files and the like
+# .SO files and the like
 
 When you run gcc/g++, you're able to specify the "-l" flag, which allows you to link system libraries into whatever it is you're compiling.
 
