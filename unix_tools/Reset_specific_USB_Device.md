@@ -1,8 +1,9 @@
-#Intro
+# Intro
+
 I find myself sometimes wanting to identify and reset a *specific* usb device. 
 This can be helpful as a hotplugging technique, or just for badly designed usb devices.
 
-#Steps
+# Steps
 
 First run:
 
