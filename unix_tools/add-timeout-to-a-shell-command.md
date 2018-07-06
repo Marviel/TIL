@@ -1,4 +1,5 @@
-#The timeout Command
+# The timeout Command
+
 *OSX NOTE: 'timeout' cmd requires you to first 'brew install coreutils', and is called with 'gtimeout'*
 
 if you run:
@@ -16,6 +17,6 @@ So, for instance:
 gives you the top screen for 3 seconds, and then the 'top' command terminates.
 
 
-#Reference:
+# Reference:
 
 http://man7.org/linux/man-pages/man1/timeout.1.html
