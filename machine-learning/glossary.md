@@ -7,7 +7,7 @@ Sort the dataset by a column that has all its values, and then use the previous 
 #### Cold-deck (Dangerous, Outdated)
 Same as Hot-Deck, but with a different data-set.
 
-#### Mean substitution (Simple, 
+#### Mean substitution
 Given a column with missing values, populate all missing values in that column with the mean of the entries in the column that do exist.
 ##### Pros
 - Simple
