@@ -1,4 +1,4 @@
-# Tools
+# Tools For Schema Validation + Coercion
 ## [JSONSchema]() [(No Coercion Support)](https://github.com/Julian/jsonschema/issues/195)
 #### [Seep (Apparently Deprecated, Coercion plugin for JSONSchema)](https://github.com/Julian/Seep)
 ## [Cerberus (Complex, Verbose Schema Definition)](http://docs.python-cerberus.org/en/stable/)
