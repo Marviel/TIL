@@ -1,6 +1,10 @@
 # Outside the docker container
 
---master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551
+Run the docker container to expose the correct ports, such as:
+- 5670
+- 5541
+- 14550
+- 14551
 
 # Inside the docker container
 
