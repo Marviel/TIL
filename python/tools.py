@@ -7,7 +7,7 @@ class SimpleSerializableModel(object):
         result = {}
         for k, value in vars(self).items():
             # Check that the value is of a type we can handle.
-            valtype type(value)
+            valtype = type(value)
 
             try:
                 result[k] = json.dumps(value)
