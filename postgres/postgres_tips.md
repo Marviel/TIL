@@ -18,7 +18,7 @@ Enter: The typed uuid. It looks like a usual UUID, but it has a prefix added to 
 - `example_4aee3613-4f08-4994-a3ac-fadb9a1f9a4d`
 
 The following code will add typed_uuid functionality to your postgres database:
-```
+```sql
 CREATE DOMAIN typed_uuid AS 
    VARCHAR CHECK ((VALUE IS NULL) OR (split_part(value,'_', 2)::uuid IS NOT NULL));
 
@@ -40,7 +40,7 @@ $function$
 
 And you can use it like:
 
-```
+```sql
 CREATE TABLE example (
     # You can now create new entries in the example table, and they'll automatically have `example_UUID` ids attached to them :)
     id typed_uuid PRIMARY KEY DEFAULT (generate_typed_uuid('example'))
