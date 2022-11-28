@@ -29,7 +29,7 @@ CREATE OR REPLACE FUNCTION public.generate_typed_uuid(type_name text)
 AS $function$	
 	BEGIN
         IF type_name IS NULL THEN
-            RAISE EXCEPTION 'generate_typed_uuid_v4 must have a type_name passed to it.';
+            RAISE EXCEPTION 'generate_typed_uuid must have a type_name passed to it.';
         ELSE
             RETURN type_name || '_' || uuid_generate_v4();
         END IF;     
