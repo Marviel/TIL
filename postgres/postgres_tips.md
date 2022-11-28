@@ -17,6 +17,7 @@ One issue with UUIDs is that they do not quickly tell you what type of object th
 Enter: The typed uuid. It looks like a usual UUID, but it has a prefix added to its beginning.
 - `example_4aee3613-4f08-4994-a3ac-fadb9a1f9a4d`
 
+The following code will add typed_uuid functionality to your postgres database:
 ```
 CREATE DOMAIN typed_uuid AS 
    VARCHAR CHECK ((VALUE IS NULL) OR (split_part(value,'_', 2)::uuid IS NOT NULL));
@@ -35,7 +36,11 @@ AS $function$
 	END;                  
 $function$
 ;
+```
 
+And you can use it like:
+
+```
 CREATE TABLE example (
     # You can now create new entries in the example table, and they'll automatically have `example_UUID` ids attached to them :)
     id typed_uuid PRIMARY KEY DEFAULT (generate_typed_uuid('example'))
