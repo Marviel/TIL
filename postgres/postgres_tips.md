@@ -20,7 +20,7 @@ Enter: The typed uuid. It looks like a usual UUID, but it has a prefix added to 
 The following code will add typed_uuid functionality to your postgres database:
 ```sql
 CREATE DOMAIN typed_uuid AS 
-   VARCHAR CHECK ((VALUE IS NULL) OR (split_part(value,'_', 2)::uuid IS NOT NULL));
+   VARCHAR CHECK ((VALUE IS NULL) OR (split_part(value,'|', 2)::uuid IS NOT NULL));
 
 CREATE OR REPLACE FUNCTION public.generate_typed_uuid(type_name text)
  RETURNS text
@@ -31,7 +31,7 @@ AS $function$
         IF type_name IS NULL THEN
             RAISE EXCEPTION 'generate_typed_uuid must have a type_name passed to it.';
         ELSE
-            RETURN type_name || '_' || uuid_generate_v4();
+            RETURN type_name || '|' || uuid_generate_v4();
         END IF;     
 	END;                  
 $function$
